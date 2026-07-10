@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/features/home/model/items_model.dart';
+import 'package:food_app/features/home/model/meals.dart';
 
 class ItemContainer extends StatelessWidget {
   const ItemContainer({super.key, required this.items});
 
-  final ItemsModel items;
+  final Meal items;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class ItemContainer extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   image: DecorationImage(
-                    image: AssetImage(items.image),
+                    image: NetworkImage(items.image),
                     fit: BoxFit.cover,
                   ),
                 ),

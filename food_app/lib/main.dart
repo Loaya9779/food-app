@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:food_app/core/data_source/firebase_data_source.dart';
 import 'package:food_app/features/auth/cubit/auth_cubit.dart';
 import 'package:food_app/features/auth/login/screen/login_screen.dart';
 import 'package:food_app/features/auth/signup/screen/signup_screen.dart';
@@ -12,6 +13,8 @@ import 'package:food_app/firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  // FirebaseDataSource firebaseDataSource = FirebaseDataSource();
+  // await firebaseDataSource.addMeals();
   runApp(const MainApp());
 }
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/features/home/model/items_model.dart';
+import 'package:food_app/features/home/model/meals.dart';
 import 'package:food_app/features/home/widgets/item_container.dart';
 
 class ItemList extends StatelessWidget {
@@ -14,12 +14,14 @@ class ItemList extends StatelessWidget {
         mainAxisSpacing: 12,
         childAspectRatio: 0.7,
       ),
-      itemCount: ItemsModel.items.length,
+      itemCount: 5,
       shrinkWrap: true,
       padding: const EdgeInsets.all(10),
       itemBuilder: (context, index) {
-        final item = ItemsModel.items[index];
-        return ItemContainer(items: item);
+        final item = Meal.fromJson;
+        return ItemContainer(
+          items: Meal(image: '', title: '', kcal: '', time: '', mealType: ''),
+        );
       },
     );
   }
