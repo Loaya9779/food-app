@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:food_app/features/home/cubit/home_cubit.dart';
 import 'package:food_app/features/home/model/category_model.dart';
 import 'package:food_app/features/home/widgets/category_container.dart';
 
@@ -28,7 +30,7 @@ class _CustomCategoryState extends State<CustomCategory> {
         ),
         itemBuilder: (context, index) {
           final category = CategoryModel.categories[index];
-      
+
           return CategoryContainer(
             title: category.name,
             isSelected: selectedIndex == index,
@@ -36,6 +38,7 @@ class _CustomCategoryState extends State<CustomCategory> {
               setState(() {
                 selectedIndex = index;
               });
+              context.read<HomeCubit>().filterMeals(category.name);
             },
           );
         },

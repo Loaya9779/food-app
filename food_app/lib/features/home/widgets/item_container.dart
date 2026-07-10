@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:food_app/features/home/model/meals.dart';
 
 class ItemContainer extends StatelessWidget {
-  const ItemContainer({super.key, required this.items});
+  const ItemContainer({
+    super.key,
+    required this.items,
+  });
 
   final Meal items;
 
@@ -37,16 +40,17 @@ class ItemContainer extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               items.title,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-
             const SizedBox(height: 8),
-
             Row(
               children: [
                 const Icon(
@@ -55,13 +59,21 @@ class ItemContainer extends StatelessWidget {
                   size: 18,
                 ),
                 const SizedBox(width: 4),
-                Text(items.kcal, style: TextStyle(color: Colors.grey.shade600)),
-
+                Text(
+                  items.kcal,
+                  style: TextStyle(color: Colors.grey.shade600),
+                ),
                 const Spacer(),
-
-                const Icon(Icons.access_time, color: Colors.grey, size: 18),
+                const Icon(
+                  Icons.access_time,
+                  color: Colors.grey,
+                  size: 18,
+                ),
                 const SizedBox(width: 4),
-                Text(items.time, style: TextStyle(color: Colors.grey.shade600)),
+                Text(
+                  items.time,
+                  style: TextStyle(color: Colors.grey.shade600),
+                ),
               ],
             ),
           ],

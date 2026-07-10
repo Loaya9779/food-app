@@ -6,6 +6,7 @@ import 'package:food_app/features/auth/cubit/auth_cubit.dart';
 import 'package:food_app/features/auth/login/screen/login_screen.dart';
 import 'package:food_app/features/auth/signup/screen/signup_screen.dart';
 import 'package:food_app/features/get_started/get_started_screen.dart';
+import 'package:food_app/features/home/cubit/home_cubit.dart';
 import 'package:food_app/features/home/screen/home_screen.dart';
 import 'package:food_app/features/splash/splash_screen.dart';
 import 'package:food_app/firebase_options.dart';
@@ -34,7 +35,10 @@ class MainApp extends StatelessWidget {
           create: (BuildContext context) => AuthCubit(),
           child: SignupScreen(),
         ),
-        '/home': (context) => HomeScreen(),
+        '/home': (context) => BlocProvider(
+          create: (context) => HomeCubit()..getMeals(),
+          child: HomeScreen(),
+        ),
       },
       home: Scaffold(body: SplashScreens()),
     );
