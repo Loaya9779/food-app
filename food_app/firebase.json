@@ -1,0 +1,25 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "food-app-680d1",
+                    "appId": "1:66591065841:android:f176371b46cc1c17784b50",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "food-app-680d1",
+                    "configurations": {
+                        "android": "1:66591065841:android:f176371b46cc1c17784b50",
+                        "ios": "1:66591065841:ios:fcfbaf1e0a300731784b50",
+                        "macos": "1:66591065841:ios:fcfbaf1e0a300731784b50",
+                        "web": "1:66591065841:web:47f3fd9393603f96784b50",
+                        "windows": "1:66591065841:web:e692d918d9972d3a784b50"
+                    }
+                }
+            }
+        }
+    }
+}

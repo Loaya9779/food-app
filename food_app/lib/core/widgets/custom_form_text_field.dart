@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 class CustomFormTextField extends StatelessWidget {
   final String hintText;
   final IconData? icon;
-  // final String? Function(String?)? validator;
+  final String? Function(String?)? validator;
   final TextEditingController controller;
 
   const CustomFormTextField({
     super.key,
     required this.hintText,
     this.icon,
-    // this.validator,
+    this.validator,
      required this.controller,
   });
 
